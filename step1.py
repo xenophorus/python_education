@@ -30,6 +30,7 @@ print('_' * 15)
 for item in matrix_t:
     print(list(item))
 
-
+print(*a)
+print(*b)
 
 
