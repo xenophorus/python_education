@@ -3,12 +3,12 @@ import psutil
 import sys
 import platform
 
-# print("Great Python Program!")
-# print("Hello, Programmer!")
-#
-# name = input("Ваше имя: ")
-#
-# print("Ghbdtn, ", name)
+print("Great Python Program!")
+print("Hello, Programmer!")
+
+name = input("Ваше имя: ")
+
+print("Ghbdtn, ", name)
 answer = input("Давай поработаем? (y/n) ")
 
 if answer == 'y':
@@ -28,7 +28,6 @@ if answer == 'y':
         print("\tв том числе логических: " + str(psutil.cpu_count() - psutil.cpu_count(logical=False)))
         print("Частота процессора: " + str(psutil.cpu_freq()))
         print("Тип ОС: " + platform.system())
-
     elif do == 3:
         print(psutil.pids())
     else:
