@@ -31,7 +31,8 @@ while answer != 'n':
             print("File system encoding: " + sys.getfilesystemencoding())
             print("CPU type: " + platform.processor())
             print("Количество ядер: " + str(psutil.cpu_count()))
-            print("\tв том числе логических: " + str(psutil.cpu_count() - psutil.cpu_count(logical=False)))
+            print("\tв том числе логических: " +
+                  str(psutil.cpu_count() - psutil.cpu_count(logical=False)))
             print("Частота процессора: " + str(psutil.cpu_freq()))
             print("Тип ОС: " + platform.system())
         elif do == 3:
