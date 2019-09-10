@@ -1,29 +1,28 @@
-def mean(value):
-    if type(value) == dict:
-        the_mean = sum(value.values()) / len(value)
-    else:
-        the_mean = sum(value) / len(value)
-    return the_mean
-
-
+# def mean(value):
+#     if type(value) == dict:
+#         the_mean = sum(value.values()) / len(value)
+#     else:
+#         the_mean = sum(value) / len(value)
+#     return the_mean
+#
 # stud_grades = {'Steve': 5.5, 'Lynn': 6.2, 'Ingrid': 7.1}
 #
 # print(mean(a))
 # print(mean(stud_grades))
-
+#
 # for key, value in stud_grades.items():
 #     print('{} has grade {}'.format(key, value))
 #
 # for i in stud_grades.keys():
 #     print(i)
-
+#
 # user_input = input("Enter your name: ")
 # message1 = "Hello, %s!" % user_input
 # message2 = "Hello, {}!".format(user_input)
 #
 # print(message1)
 # print(message2)
-
+#
 # phone_numbers = {"John Smith": "+37682929928", "Marry Simpons": "+423998200919"}
 #
 # for i in phone_numbers.values():
@@ -35,7 +34,7 @@ def mean(value):
 #     return 'Hi %s %s' % (tName, tSurname)
 #
 # print(greatName('ann', 'johnson'))
-
+#
 # b = [i // 2 for i in a]
 # c = [i / 2 for i in a if i % 2 != 1]
 # print(b)
@@ -51,9 +50,7 @@ def mean(value):
 #
 # print(isDigit(b))
 #
-a = [5, 32, '5', 23, 76, 3, 12, 7, 4, 5]
-
-
+#
 # def summ(a):
 #     soom = 0
 #     for elm in a:
@@ -62,10 +59,42 @@ a = [5, 32, '5', 23, 76, 3, 12, 7, 4, 5]
 #
 #
 # print(summ(a))
+#
+# def concat(d, e):
+#     return str(d) + str(e)
+#
+#
+# print(concat('coding ', 'Python'))
+# print(concat(4, 2))
 
-def concat(d, e):
-    return str(d) + str(e)
+a = [5, 32, 5, 23, 76, 3, 12, 7, 4, 5]
+b = [10, 20, 30, 40]
+c = ('snow', 'ice', 'flake')
+d = ('space', 'helm', 'window', 'star')
 
 
-print(concat('coding ', 'Python'))
-print(concat(4, 2))
+def averList(*args):
+    return sum(*args) / len(*args)
+
+
+def toUpper(*args):
+    newStr = [i.upper() for i in args]
+    newStr.sort()
+    return newStr
+
+
+def kwrd(**kwargs):
+    return kwargs
+
+
+def find_sum(**kwargs):
+    return sum(kwargs.values())
+
+
+print(find_sum(a=4, b=5))
+
+# print(averList(a))
+# print(averList(b))
+print(toUpper('gg', 'bbb', 'ddd', 'aaaa'))
+
+print(kwrd(a=1, b=2, c=3))
