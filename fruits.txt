@@ -1,7 +1,8 @@
 apple
 orange
 citron
-ananas
-pommegranate
-
+kiwi
+peach
+mandarin
+pomegranate
 
