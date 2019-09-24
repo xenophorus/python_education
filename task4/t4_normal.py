@@ -27,7 +27,7 @@ def cutter(a):
 
 def namecheck(a, b):
     print(a, b)
-    pattern = '[A-Z][a-z]'  # Я так и не сообразил, что делать в случае верблюжьей нотации
+    pattern = '[A-Z][a-z]'  # Я так и не сообразил, что делать в ТакОм СлучАе
     if re.match(pattern, a) == None:
         print("Имя введено некорректно!")
         sys.exit()
