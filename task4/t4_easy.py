@@ -17,7 +17,7 @@ b = [i ** 2 for i in a]
 fruits1 = ['apple', 'lime', 'orange', 'pear', 'mango', 'apricot']
 fruits2 = ['manderin', 'apple', 'lime', 'kiwifruit', 'banana', 'pear']
 
-c = [i for i in fruits1 if fruits1.count(i) == 1 and fruits2.count(i) == 1]
+c = [i for i in fruits1 if i in fruits2]
 
 
 # Задание-3:
