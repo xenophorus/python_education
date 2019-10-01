@@ -9,12 +9,12 @@
 # Посмотрите на задачу-1 подумайте как выделить общие признаки классов
 # в родительский и остальные просто наследовать от него.
 
-class TownCar:
-    def __init__(self):
-        self.speed = 50
-        self.color = 'red'
-        self.name = 'Drandoolet'
-        self.is_police = False
+class Car:
+    def __init__(self, speed, color, name, is_police):
+        self.speed = speed
+        self.color = color
+        self.name = name
+        self.is_police = is_police
 
     def go(self):
         print('moving forward')
@@ -31,31 +31,34 @@ class TownCar:
             print('Turning somewhere')
 
 
-class SportCar(TownCar):
-    def __init__(self):
-        super().__init__()
-        self.speed = 100
-        self.name = 'Speedy Drandoolet'
-        self.color = 'green'
+class SportCar(Car):
+    def __init__(self, speed, color, name, is_police, spoiler):
+        self.got_spoiler = spoiler
+        super().__init__(speed, color, name, is_police)
 
 
-class WorkCar(TownCar):
-    def __init__(self):
-        super().__init__()
-        self.speed = 30
-        self.color = 'yellow'
-        self.name = 'Work Drandoolet'
+class WorkCar(Car):
+    def __init__(self, speed, color, name, is_police, lift):
+        self.can_lift = lift
+        super().__init__(speed, color, name, is_police)
 
 
 class PoliceCar(SportCar):
-    def __init__(self):
-        super().__init__()
-        self.color = 'blue'
-        self.name = 'Police Drandoolet'
-        self.is_police = True
+    def __init__(self, speed, color, name, is_police, spoiler, migalkees):
+        self.got_migalkees = migalkees
+        super().__init__(speed, color, name, is_police, spoiler)
 
+town_car = Car(50, 'red', 'Drandoolet', False)
+sport_car = SportCar(100, 'blue', 'SportDrandoolet', False, True)
+work_car = WorkCar(30, 'yellow', 'HeavyDrandoolet', False, 500)
+police_car = PoliceCar(100, 'dark blue', 'PoliceDrandoolet', True, True, True)
 
-print(TownCar.is_police, TownCar.color, TownCar.name)
+print(town_car.name, town_car.speed, town_car.color, town_car.is_police)
+print(sport_car.name, sport_car.speed, sport_car.color, sport_car.is_police, sport_car.got_spoiler)
+print(work_car.name, work_car.is_police, work_car.color, work_car.speed, work_car.can_lift)
+print(police_car.speed, police_car.color, police_car.name, police_car.is_police, police_car.got_spoiler,
+      police_car.got_migalkees)
 
-
-
+police_car.turn('right')
+sport_car.turn('left')
+work_car.turn(10)
