@@ -33,3 +33,6 @@ with open('textfiles/data.txt', 'r') as f:
 with open('textfiles/data.txt', 'a+') as f:
     f.write(cont)
     f.write(cont)
+
+print('Hello world!')
+#Это для задания
