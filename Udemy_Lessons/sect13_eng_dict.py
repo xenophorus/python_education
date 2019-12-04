@@ -1,6 +1,6 @@
 import json
 
-data = json.load(open('D:/Ja/python_education/Udemy_Lessons/data/data.json'))
+data = json.load(open('data/data.json'))
 
 
 def translate(word):
