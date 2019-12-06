@@ -7,51 +7,11 @@
 # Иначе вывод ("Нет решений")
 # Конец
 
+# 57-00
 
-
-a = int(input('Введите номер буквы (1 - 26): '))
-print(f'Это буква {chr(a + 96)}')
-
-print('Введите три числа')
-a = float(input('\tВведите число a: '))
-b = float(input('\tВведите число b: '))
-c = float(input('\tВведите число c: '))
-
-if a + b > c and a + c > b and b + c > a:
-    print('Треугольник возможен!')
-    if a == b == c:
-        print('\tРавносторонний треугольник')
-    elif a == b or b == c or a == c:
-        print('\tРавнобедренный треугольник')
-    else:
-        print('\tРазносторонний треугольник')
-
-a = int(input('Введите год: '))
-if a % 400 == 0:
-    print(f'{a} год - високосный')
-elif a % 100 == 0:
-    print(f'{a} год - невисокосный')
-elif a % 4 == 0:
-    print(f'{a} год - високосный')
-else:
-    print(f'{a} год - невисокосный')
-
-
-print('Введите три числа')
-a = int(input('\tВведите число a: '))
-b = int(input('\tВведите число b: '))
-c = int(input('\tВведите число c: '))
-
-if a == b or a == c or b == a:
-    print(f'среднего числа нет')
-
-if max(a, b, c) == a:
-    print(f'среднее число - {max(b, c)}')
-if max(a, b, c) == b:
-    print(f'среднее число - {max(a, c)}')
-if max(a, b, c) == c:
-    print(f'среднее число - {max(a, b)}')
-
-
-
-
+x = 953
+a = x // 100
+b = (x - (a * 100)) // 10
+c = (x - a * 100) - b * 10
+print(a * b * c)
+print(a + b + c)
