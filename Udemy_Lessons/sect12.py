@@ -1,5 +1,7 @@
 import time
 import os
+import pandas
+
 
 while True:
     if os.path.exists('../textfiles/vegetables.txt'):
