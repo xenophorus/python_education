@@ -11,10 +11,3 @@ n = input('n: ')
 
 while n != 0:
     print(n)
-
-
-
-
-
-
-
