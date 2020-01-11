@@ -31,4 +31,4 @@ def begin(str):
     print(f'Строка "{str}" содержит {len(st)} подстрок')
 
 
-begin('papapapapa')
+begin('papa')
